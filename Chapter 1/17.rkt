@@ -11,6 +11,8 @@
 ; which uses a logarithmic number of steps, O(log(n)).
 (define (double x) (+ x x))
 
+(define (even? x) (= (remainder x 2) 0))
+
 (define (multiply a b)
   (cond ((= b 1) a)
         ((even? b) (double(multiply a (/ b 2))))
